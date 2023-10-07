@@ -1,6 +1,6 @@
 const allowedCors = [
-  'https://dacorm.nomoredomains.icu',
-  'http://dacorm.nomoredomains.icu',
+  'https://ssulss.nomoredomainsrocks.ru',
+  'http://ssulss.nomoredomainsrocks.ru',
   'https://localhost:3000',
   'http://localhost:3000',
 ];

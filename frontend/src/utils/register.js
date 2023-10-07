@@ -8,7 +8,7 @@ const handleResponse = async (data) => {
 }
 
 export async function register(password, email) {
-    const data = await fetch('https://api.dacorm.nomoredomains.icu/signup', {
+    const data = await fetch('https://api.ssulss.nomoredomainsrocks.ru/signup', {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -22,7 +22,7 @@ export async function register(password, email) {
 }
 
 export async function login(password, email) {
-    const data = await fetch('https://api.dacorm.nomoredomains.icu/signin', {
+    const data = await fetch('https://api.ssulss.nomoredomainsrocks.ru/signin', {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -36,7 +36,7 @@ export async function login(password, email) {
 }
 
 export async function auth(token) {
-    const data = await fetch('https://api.dacorm.nomoredomains.icu/users/me', {
+    const data = await fetch('https://api.ssulss.nomoredomainsrocks.ru/users/me', {
         method: "GET",
         headers: {
             "Content-Type": "application/json",
