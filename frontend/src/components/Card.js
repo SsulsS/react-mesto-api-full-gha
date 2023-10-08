@@ -18,7 +18,7 @@ const Card = ({ image, title, likesCount, onCardClick, card, onCardLike, onCardD
     return (
         <li className="card__item">
             <img src={trash} alt="Корзина"
-                 className="card__item-thrash" onClick={() => {
+                 className="card__item-thrash" style={isOwn ? hidden : null} onClick={() => {
                      onCardDelete(card)
             }} />
             <img src={image} alt={title}

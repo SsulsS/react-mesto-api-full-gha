@@ -3,7 +3,6 @@ const {
   NOT_FOUND_ERROR_CODE,
   DEFAULT_ERROR_CODE,
   INCORRECT_DATA_ERROR_CODE,
-  SUCCESS_CREATED_CODE,
 } = require('../utils/constants');
 const BadRequestError = require('../utils/errors/badRequestError');
 const NotFoundError = require('../utils/errors/notFoundError');
@@ -28,7 +27,9 @@ module.exports.createCard = async (req, res, next) => {
     const { name, link } = req.body;
     const card = await Card.create({ name, link, owner: req.user._id });
 
-    res.send(card);
+    res.send({
+      card,
+    });
   } catch (e) {
     if (e.name === 'ValidationError') {
       next(new BadRequestError(e.message));

@@ -5,7 +5,6 @@ const {
   NOT_FOUND_ERROR_CODE,
   DEFAULT_ERROR_CODE,
   INCORRECT_DATA_ERROR_CODE,
-  SUCCESS_CREATED_CODE,
 } = require('../utils/constants');
 const BadRequestError = require('../utils/errors/badRequestError');
 const NotFoundError = require('../utils/errors/notFoundError');
@@ -56,9 +55,6 @@ module.exports.createUser = async (req, res, next) => {
       password: hash,
     });
     res.send({
-      message: 'Пользователь успешно создан',
-    });
-    res.status(SUCCESS_CREATED_CODE).send({
       message: 'Пользователь успешно создан',
     });
   } catch (e) {

@@ -39,7 +39,7 @@ function App() {
                 });
                 setCards(res);
             } catch (e) {
-                console.warn(e)
+                console.warn(e) 
             }
         }
     }

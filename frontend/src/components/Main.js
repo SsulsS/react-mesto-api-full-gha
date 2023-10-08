@@ -24,7 +24,8 @@ const Main = ({ onEditProfile, onAddPlace, onEditAvatar, onCardClick, onCardLike
             <section className="card">
                 <ul className="card__items">
                     {
-                        cards.map((card) => (<Card
+                        cards.map((card) => (console.log(card),
+                            <Card
                             key={card._id}
                             card={card}
                             title={card.name}
