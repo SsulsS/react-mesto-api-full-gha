@@ -141,7 +141,7 @@ function App() {
 
     const handleAddPlace = async (obj) => {
         try {
-            const { card } = await api.addNewCard(obj);
+            const card = await api.addNewCard(obj);
             setCards([card, ...cards]);
             closeAllPopups();
         } catch (e) {

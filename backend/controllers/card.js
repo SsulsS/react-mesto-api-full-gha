@@ -28,7 +28,7 @@ module.exports.createCard = async (req, res, next) => {
     const { name, link } = req.body;
     const card = await Card.create({ name, link, owner: req.user._id });
 
-    res.status(201).send(card);
+    res.status(SUCCESS_CREATED_CODE).send(card);
   } catch (e) {
     if (e.name === 'ValidationError') {
       next(new BadRequestError(e.message));

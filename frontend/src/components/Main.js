@@ -6,8 +6,6 @@ const Main = ({ onEditProfile, onAddPlace, onEditAvatar, onCardClick, onCardLike
     const profileContext = useContext(CurrentUserContext);
     const { name, avatar, about } = profileContext;
 
-    console.log(cards);
-
     return (
         <>
             <section className="profile">
@@ -28,8 +26,8 @@ const Main = ({ onEditProfile, onAddPlace, onEditAvatar, onCardClick, onCardLike
                             <Card
                             key={card._id}
                             card={card}
-                            title={card.name}
                             image={card.link}
+                            title={card.name}
                             likesCount={card?.likes?.length}
                             onCardClick={onCardClick}
                             onCardLike={onCardLike}

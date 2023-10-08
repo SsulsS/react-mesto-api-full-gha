@@ -29,6 +29,7 @@ class Api {
             }),
         }).then(this._handleResponse)
     }
+    
     addNewCard(data) {
         return fetch(`${this._baseUrl}/cards`, {
             method: "POST",
