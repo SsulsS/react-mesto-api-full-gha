@@ -2,14 +2,8 @@ import React, {useContext} from 'react';
 import trash from "../images/Trash.svg";
 import CurrentUserContext from "../contexts/CurrentUserContext";
 
-const hidden = {
-    display: 'none'
-}
-
 const Card = ({ image, title, likesCount, onCardClick, card, onCardLike, onCardDelete }) => {
     const user = useContext(CurrentUserContext);
-
-    const isOwn = (card.owner || card.owner._id) !== user._id;
 
     const isLiked = card.likes.some((i) => (i._id || i) === user._id);
 
@@ -18,7 +12,7 @@ const Card = ({ image, title, likesCount, onCardClick, card, onCardLike, onCardD
     return (
         <li className="card__item">
             <img src={trash} alt="Корзина"
-                 className="card__item-thrash" style={isOwn ? hidden : null} onClick={() => {
+                 className="card__item-thrash" onClick={() => {
                      onCardDelete(card)
             }} />
             <img src={image} alt={title}
